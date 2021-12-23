@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavoriteCityFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favoritesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#FFFEFE"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/map_marker_minus" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#272727"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewStatus"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/weather_sunny" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="30dp"
+            android:text="73 F"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:text="Heavy Snow"
+            android:textColor="#808080"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:text="Las Vegas"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/information_outline" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        app:cardBackgroundColor="#272727"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2button1"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:text="Card4"
+                app:cardBackgroundColor="#272727">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/water_percent" />
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="67%"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="110dp"
+                    android:gravity="center"
+                    android:text="Humidty"
+                    android:textColor="#808080"
+                    android:textSize="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2button2"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:text="Card4"
+                app:cardBackgroundColor="#272727">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/weather_windy" />
+
+                <TextView
+                    android:id="@+id/windSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="0.32mph"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="110dp"
+                    android:gravity="center"
+                    android:text="Wind Speed"
+                    android:textColor="#808080"
+                    android:textSize="16dp"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2button3"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                app:cardBackgroundColor="#272727">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/eye_outline" />
+
+                <TextView
+                    android:id="@+id/visibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="8.33mi"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="110dp"
+                    android:gravity="center"
+                    android:text="Visibility"
+                    android:textColor="#808080"
+                    android:textSize="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2button4"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_columnSpan="1"
+                app:cardBackgroundColor="#272727">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/gauge" />
+
+                <TextView
+                    android:id="@+id/pressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="1209.09mb"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="110dp"
+                    android:gravity="center"
+                    android:text="Pressure"
+                    android:textColor="#808080"
+                    android:textSize="16dp"/>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#272727"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell0a"
+                            android:text="2021-12-09"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell0b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell0c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell0d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell1a"
+                            android:text="2021-12-10"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell1b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell1c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell1d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell2a"
+                            android:text="2021-12-11"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell2b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell2c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell2d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell3a"
+                            android:text="2021-12-12"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell3b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell3c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell3d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell4a"
+                            android:text="2021-12-13"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell4b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell4c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell4d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell5a"
+                            android:text="2021-12-14"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell5b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell5c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell5d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell6a"
+                            android:text="2021-12-15"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell6b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell6c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell6d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell7a"
+                            android:text="2021-12-16"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell7b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell7c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell7d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell8a"
+                            android:text="2021-12-17"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell8b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell8c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell8d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell9a"
+                            android:text="2021-12-18"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell9b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell9c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell9d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/cell10a"
+                            android:text="2021-12-19"
+                            android:paddingLeft="15dp"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical"/>
+
+                        <ImageView
+                            android:id="@+id/cell10b"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:src="@drawable/weather_sunny" />
+
+                        <TextView
+                            android:id="@+id/cell10c"
+                            android:text="54"
+                            android:paddingLeft="20dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:id="@+id/cell10d"
+                            android:text="76"
+                            android:layout_width="50dp"
+                            android:paddingLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center_vertical" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
