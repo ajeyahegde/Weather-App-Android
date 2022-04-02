@@ -10,7 +10,7 @@ This Android mobile application allows users to search for weather information u
 Mobile Application is developed using Android Studio.
 Backend - NodeJS Deployed on Google Cloud Platform.
 
-**Technologies Used:** Android Studio, NodeJS,Google Cloud Platform.
+**Technologies Used:** Android Studio, Java, Java Collections Framework, NodeJS,Google Cloud Platform.
 
 **APIs Used:**
 
